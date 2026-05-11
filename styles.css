@@ -484,7 +484,7 @@ button {
   overflow: hidden;
   border-radius: 44px;
   isolation: isolate;
-  aspect-ratio: 2010 / 1038;
+  aspect-ratio: 2010 / 1059;
 }
 
 .card-link {
@@ -517,12 +517,12 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 2010 / 1038;
+  aspect-ratio: 2010 / 1059;
   object-fit: cover;
   image-rendering: auto;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0) scale(1.018);
+  transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
   will-change: transform;
   position: relative;
@@ -544,45 +544,45 @@ button {
 
 @keyframes card-jiggle-a {
   0% {
-    transform: translate3d(0, 0, 0) scale(1.018) rotate(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
 
   25% {
-    transform: translate3d(-4px, 2px, 0) scale(1.024) rotate(-0.32deg);
+    transform: translate3d(-3px, 2px, 0) scale(1.006) rotate(-0.24deg);
   }
 
   50% {
-    transform: translate3d(3px, -3px, 0) scale(1.026) rotate(0.26deg);
+    transform: translate3d(2px, -2px, 0) scale(1.008) rotate(0.2deg);
   }
 
   75% {
-    transform: translate3d(-2px, 3px, 0) scale(1.022) rotate(-0.2deg);
+    transform: translate3d(-2px, 2px, 0) scale(1.005) rotate(-0.16deg);
   }
 
   100% {
-    transform: translate3d(4px, -2px, 0) scale(1.025) rotate(0.3deg);
+    transform: translate3d(3px, -2px, 0) scale(1.007) rotate(0.22deg);
   }
 }
 
 @keyframes card-jiggle-b {
   0% {
-    transform: translate3d(0, 0, 0) scale(1.018) rotate(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
 
   25% {
-    transform: translate3d(4px, -2px, 0) scale(1.024) rotate(0.28deg);
+    transform: translate3d(3px, -2px, 0) scale(1.006) rotate(0.22deg);
   }
 
   50% {
-    transform: translate3d(-3px, 3px, 0) scale(1.026) rotate(-0.24deg);
+    transform: translate3d(-2px, 2px, 0) scale(1.008) rotate(-0.18deg);
   }
 
   75% {
-    transform: translate3d(2px, -3px, 0) scale(1.022) rotate(0.18deg);
+    transform: translate3d(2px, -2px, 0) scale(1.005) rotate(0.14deg);
   }
 
   100% {
-    transform: translate3d(-4px, 2px, 0) scale(1.025) rotate(-0.28deg);
+    transform: translate3d(-3px, 2px, 0) scale(1.007) rotate(-0.2deg);
   }
 }
 
@@ -672,15 +672,15 @@ button {
   position: static;
   min-width: 0;
   height: 56px;
-  padding: 0 24px 0 18px;
+  padding: 0 24px 0 20px;
   border-radius: 999px;
   background: rgba(41, 41, 41, 0.92);
   color: #ffffff;
   text-decoration: none;
   display: inline-flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -705,8 +705,8 @@ button {
 .case-back-button svg {
   display: block;
   flex: 0 0 auto;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .case-content {
@@ -1349,6 +1349,149 @@ button {
 }
 
 @media (max-width: 760px) {
+  .page {
+    padding: 0;
+  }
+
+  .hero-frame {
+    height: 520px;
+    padding: 92px 24px 0;
+  }
+
+  .hero-badges {
+    width: 278px;
+    height: 128px;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 344px;
+    margin-top: 24px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero-subtitle {
+    width: 100%;
+    max-width: 344px;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .hero-subtitle-line {
+    display: inline;
+  }
+
+  .hero-subtitle-line + .hero-subtitle-line::before {
+    content: " ";
+  }
+
+  .hero-actions {
+    margin-top: 32px;
+  }
+
+  .page .contact-actions {
+    gap: 12px;
+  }
+
+  .page .frame-button {
+    height: 56px;
+    min-height: 56px;
+    padding: 17px 24px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .page .frame-button-small,
+  .page .frame-button-icon {
+    width: 56px;
+    min-width: 56px;
+    padding: 0;
+  }
+
+  .page .frame-button-icon {
+    padding: 12px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: -5px;
+    padding: 0 24px;
+  }
+
+  .card-shell {
+    border-radius: 20px;
+  }
+
+  .experience {
+    margin-top: 40px;
+  }
+
+  .experience-frame {
+    height: 450px;
+  }
+
+  .experience-stack {
+    width: 345px;
+    height: 350px;
+  }
+
+  .experience-stack .experience-group:first-child {
+    left: 0;
+    top: 112px;
+  }
+
+  .experience-stack .experience-group:last-child {
+    left: 39px;
+    top: 196px;
+  }
+
+  .experience-column {
+    gap: 4px;
+  }
+
+  .experience-stack .experience-group:last-child .experience-column {
+    gap: 2px;
+  }
+
+  .experience-item {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .experience-item-spaced {
+    letter-spacing: 0.48px;
+  }
+
+  .experience-footer {
+    bottom: 22px;
+  }
+
+  .experience .scroll-top-button {
+    right: 24px;
+    bottom: 108px;
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    padding: 18px;
+    border-radius: 999px;
+    background: rgba(41, 41, 41, 0.76);
+    opacity: 0.86;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .experience .scroll-top-button svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .experience .scroll-top-button svg path {
+    stroke-width: 2.2px;
+  }
+
   .case-hypothesis-grid {
     grid-template-columns: 1fr;
   }
