@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozon Case — Polina Podkopaeva</title>
+    <meta
+      name="description"
+      content="Кейс Polina Podkopaeva про улучшение процесса выдачи устройств в Ozon."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="case-body">
+    <nav class="case-toc" aria-label="Оглавление кейса">
+      <div class="case-toc-panel">
+        <button class="case-toc-item" type="button" data-case-section-target="case-context">
+          Вводные
+        </button>
+        <button class="case-toc-item" type="button" data-case-section-target="case-research">
+          Исследование
+        </button>
+        <button class="case-toc-item" type="button" data-case-section-target="case-findings">
+          Что выяснила
+        </button>
+        <button class="case-toc-item" type="button" data-case-section-target="case-hypotheses">
+          Гипотезы
+        </button>
+        <button class="case-toc-item" type="button" data-case-section-target="case-solution">
+          Решение
+        </button>
+        <button class="case-toc-item" type="button" data-case-section-target="case-results">
+          Итоги
+        </button>
+      </div>
+
+      <button class="case-toc-trigger" type="button" aria-label="Открыть оглавление">
+        <span class="case-toc-line"></span>
+        <span class="case-toc-line"></span>
+        <span class="case-toc-line"></span>
+        <span class="case-toc-line"></span>
+        <span class="case-toc-line"></span>
+        <span class="case-toc-line"></span>
+        <span class="case-toc-line"></span>
+      </button>
+    </nav>
+
+    <main class="case-page">
+      <section class="case-scale" data-case-scale-root>
+        <div class="case-frame">
+          <header class="case-header">
+            <div class="case-header-bar">
+              <a class="case-back-button" href="./index.html">
+                <svg width="28" height="28" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                  <path
+                    d="M14.25 9H3.75"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 14.25L3.75 9L9 3.75"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>На главную</span>
+              </a>
+            </div>
+          </header>
+
+          <div class="case-content">
+            <section class="case-media case-media-cover" aria-label="Главный экран кейса Ozon">
+              <img
+                src="./assets/ozon-case-cover.png"
+                alt="Главный экран кейса Ozon с устройством и приложениями"
+                width="4308"
+                height="2622"
+              />
+            </section>
+
+            <div class="case-copy-column case-copy-column-intro">
+              <section class="case-lead">
+                <h1 class="case-title">
+                  От хаоса к 3 шагам: как я улучшила процесс выдачи устройств
+                </h1>
+                <p class="case-paragraph case-paragraph-lead">
+                  Ozon.Updater&nbsp;— единая точка входа во внутренние приложения для сотрудников
+                  склада. С&nbsp;2025&nbsp;года я&nbsp;единственный дизайнер продукта: развиваю
+                  его и&nbsp;проектирую новые сценарии, включая выдачу и&nbsp;возврат устройств
+                </p>
+              </section>
+            </div>
+
+            <div class="case-copy-column">
+              <section class="case-section" id="case-context" data-case-section>
+                <h2 class="case-heading">Вводные</h2>
+                <p class="case-paragraph">
+                  Сотрудники склада каждый день получают&nbsp;ТСД&nbsp;для работы со складскими
+                  операциями и&nbsp;сдают их в&nbsp;конце смены. Проверка устройств выполняется
+                  вручную и&nbsp;занимает время. Бизнесу сложно отследить, у&nbsp;кого
+                  и&nbsp;на каком этапе устройство вышло из&nbsp;строя, чтобы находить
+                  ответственных
+                </p>
+              </section>
+
+              <section class="case-section" id="case-research" data-case-section>
+                <h2 class="case-heading">Исследование</h2>
+                <p class="case-paragraph">
+                  Провела интервью со стейкхолдерами и сотрудниками склада, чтобы понять процесс,
+                  основные боли и&nbsp;ограничения с&nbsp;обеих сторон. Выяснила, что отсутствие
+                  автоматизации и&nbsp;прозрачного учета мешает бизнесу контролировать процесс,
+                  а&nbsp;сотрудникам быстро выполнять работу
+                </p>
+              </section>
+
+              <section class="case-section" id="case-findings" data-case-section>
+                <h2 class="case-heading">Что выяснила</h2>
+                <ul class="case-findings">
+                  <li class="case-finding-item">
+                    <span class="case-finding-bullet" aria-hidden="true"></span>
+                    <p class="case-finding-copy">
+                      Бизнес терял деньги из-за поломок, потерь устройств и долгого ремонта
+                    </p>
+                  </li>
+                  <li class="case-finding-item">
+                    <span class="case-finding-bullet" aria-hidden="true"></span>
+                    <p class="case-finding-copy">
+                      Сложно понять, на каком этапе устройство вышло из&nbsp;строя и&nbsp;кто за
+                      это
+                      отвечает
+                    </p>
+                  </li>
+                  <li class="case-finding-item">
+                    <span class="case-finding-bullet" aria-hidden="true"></span>
+                    <p class="case-finding-copy">
+                      Сотрудники сталкивались с&nbsp;очередями на&nbsp;выдаче и&nbsp;потерей
+                      времени при замене неисправных устройств
+                    </p>
+                  </li>
+                  <li class="case-finding-item">
+                    <span class="case-finding-bullet" aria-hidden="true"></span>
+                    <p class="case-finding-copy">
+                      Техподдержка тратила много времени на&nbsp;поиск проблем, а&nbsp;устройства
+                      могли надолго зависать в&nbsp;неопределенном статусе
+                    </p>
+                  </li>
+                </ul>
+              </section>
+
+              <section
+                class="case-section case-section-with-tight-media case-hypotheses"
+                id="case-hypotheses"
+                data-case-section
+              >
+                <h2 class="case-heading">Гипотезы</h2>
+                <div class="case-media case-section-media case-media-hypotheses">
+                  <img
+                    src="./assets/ozon-case-hypotheses.png"
+                    alt="Гипотезы по улучшению процесса выдачи и возврата устройств"
+                    width="1320"
+                    height="192"
+                  />
+                </div>
+              </section>
+
+              <section class="case-section case-section-with-media" id="case-solution" data-case-section>
+                <h2 class="case-heading">Решение</h2>
+                <p class="case-paragraph">
+                  Спроектировала систему учета&nbsp;ТСД&nbsp;и пошаговый сценарий активации
+                  устройства. Чтобы снизить нагрузку на&nbsp;пользователя, добавила легкий игровой
+                  элемент:
+                  проверку экрана через плавное закрашивание квадратов.
+                </p>
+                <div class="case-media case-section-media case-media-solution">
+                  <img
+                    src="./assets/ozon-case-solution.png"
+                    alt="Пошаговый сценарий выдачи устройства и проверки ТСД"
+                    width="4314"
+                    height="1728"
+                  />
+                </div>
+              </section>
+            </div>
+
+            <div class="case-copy-column case-copy-column-tail">
+              <section class="case-section" id="case-results" data-case-section>
+                <h2 class="case-heading">Итоги</h2>
+                <p class="case-paragraph">
+                  Интерактивный сценарий был новым паттерном для складского продукта, но мне
+                  удалось провести это решение и&nbsp;вовлечь команду в&nbsp;новый подход.
+                  В&nbsp;итоге бизнес получил систему учета&nbsp;ТСД, а&nbsp;пользователи&nbsp;—
+                  понятный инструмент для рутинного процесса. В&nbsp;июне&nbsp;2026
+                  пройдет&nbsp;UAT, после которого я
+                  дополню кейс результатами
+                </p>
+              </section>
+            </div>
+          </div>
+
+          <footer class="case-footer">
+            <button
+              class="scroll-top-button case-scroll-top-button case-scroll-top-button-footer"
+              type="button"
+              aria-label="Вернуться в начало"
+              data-scroll-top
+            >
+              <svg width="36" height="36" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                <path
+                  d="M11 17.4167V4.58337"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M4.58325 11L11 4.58337L17.4166 11"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div class="case-footer-actions contact-actions" aria-label="Контакты">
+              <a class="frame-button frame-button-dark frame-button-small" href="https://tula.hh.ru/resume/7322a8bdff0c897cd50039ed1f71394b70786d" target="_blank" rel="noreferrer" aria-label="CV">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                  <rect width="56" height="56" rx="28" fill="#292929" />
+                  <path
+                    d="M36.7484 35H33.3284L28.6284 21H31.6284L35.0484 31.76L38.4484 21H41.4684L36.7484 35Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M21.8115 35.28C19.7182 35.28 17.9782 34.58 16.5915 33.18C15.2182 31.7933 14.5315 30.0666 14.5315 28C14.5315 25.92 15.2182 24.1933 16.5915 22.82C17.9782 21.42 19.7182 20.72 21.8115 20.72C23.0782 20.72 24.2448 21.02 25.3115 21.62C26.3915 22.2066 27.2315 23.0066 27.8315 24.02L25.4515 25.4C25.1048 24.7733 24.6115 24.2866 23.9715 23.94C23.3315 23.58 22.6115 23.4 21.8115 23.4C20.4515 23.4 19.3515 23.8266 18.5115 24.68C17.6848 25.5466 17.2715 26.6533 17.2715 28C17.2715 29.3333 17.6848 30.4333 18.5115 31.3C19.3515 32.1533 20.4515 32.58 21.8115 32.58C22.6115 32.58 23.3315 32.4066 23.9715 32.06C24.6248 31.7 25.1182 31.2133 25.4515 30.6L27.8315 31.98C27.2315 32.9933 26.3915 33.8 25.3115 34.4C24.2448 34.9866 23.0782 35.28 21.8115 35.28Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a class="frame-button frame-button-light" href="https://t.me/secretpolly" target="_blank" rel="noreferrer">Написать</a>
+              <a class="frame-button frame-button-dark frame-button-icon" href="mailto:chaikoffapolly@gmail.com" aria-label="Почта">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                  <path
+                    d="M4.33341 4.33337H21.6667C22.8584 4.33337 23.8334 5.30837 23.8334 6.50004V19.5C23.8334 20.6917 22.8584 21.6667 21.6667 21.6667H4.33341C3.14175 21.6667 2.16675 20.6917 2.16675 19.5V6.50004C2.16675 5.30837 3.14175 4.33337 4.33341 4.33337Z"
+                    stroke="white"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.8334 6.5L13.0001 14.0833L2.16675 6.5"
+                    stroke="white"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
