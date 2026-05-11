@@ -1510,8 +1510,10 @@ button {
   }
 
   .case-header-bar {
+    position: fixed !important;
     top: 24px;
     left: 24px;
+    z-index: 100;
   }
 
   .case-back-button {
@@ -1783,15 +1785,17 @@ button {
     border-radius: 14px;
   }
 
-  .case-hypothesis-grid {
-    display: flex;
+  .case-page .case-hypothesis-grid {
+    display: flex !important;
     flex-direction: column;
     align-items: stretch;
+    grid-template-columns: none !important;
     gap: 16px;
   }
 
-  .case-hypothesis-card {
-    width: 100%;
+  .case-page .case-hypothesis-grid > .case-hypothesis-card {
+    width: 100% !important;
+    flex: 0 0 auto;
   }
 
   .case-page:not(.menus-case-page) .case-section-media,

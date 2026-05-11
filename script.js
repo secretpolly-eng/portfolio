@@ -10,7 +10,12 @@ const caseToc = document.querySelector(".case-toc");
 const caseTocTrigger = document.querySelector(".case-toc-trigger");
 const caseTocItems = Array.from(document.querySelectorAll("[data-case-section-target]"));
 const caseTocLines = Array.from(document.querySelectorAll(".case-toc-line"));
+const caseHeaderBar = document.querySelector(".case-header-bar");
 const mobileViewportQuery = window.matchMedia("(max-width: 760px)");
+
+if (caseHeaderBar && caseHeaderBar.parentElement !== document.body) {
+  document.body.appendChild(caseHeaderBar);
+}
 
 function updateHeroScale() {
   if (!heroScaleRoot || !heroFrame) {
