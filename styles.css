@@ -1492,8 +1492,256 @@ button {
     stroke-width: 2.2px;
   }
 
+  .case-page {
+    --case-heading-font-size: 32px;
+    --case-heading-line-height: 40px;
+    --case-heading-letter-spacing: 0.02em;
+    --case-body-font-size: 16px;
+    --case-body-line-height: 28px;
+    --case-gap-heading-to-text: 8px;
+    --case-gap-text-to-media: 16px;
+  }
+
+  .case-frame {
+    gap: 0;
+  }
+
+  .case-header-bar {
+    top: 24px;
+    left: 24px;
+  }
+
+  .case-back-button {
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 40px;
+    gap: 0;
+  }
+
+  .case-back-button span {
+    display: none;
+  }
+
+  .case-back-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .case-back-button svg path {
+    stroke-width: 2.22px;
+  }
+
+  .case-toc {
+    display: none;
+  }
+
+  .case-content {
+    gap: 32px;
+    padding-top: 104px;
+  }
+
+  .case-copy-column {
+    width: calc(100% - 48px);
+    gap: 48px;
+  }
+
+  .case-copy-column:not(.case-copy-column-intro) {
+    margin-top: 16px;
+  }
+
+  .case-copy-column-intro {
+    gap: 0;
+  }
+
+  .case-title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .case-heading,
+  .case-subheading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .case-section {
+    gap: var(--case-gap-heading-to-text);
+    scroll-margin-top: 104px;
+  }
+
+  .case-lead {
+    gap: var(--case-gap-heading-to-text);
+  }
+
+  .case-content > .case-media {
+    width: 100vw;
+    max-width: none;
+    border-radius: 20px;
+  }
+
+  .case-content > .case-media img {
+    border-radius: 20px;
+  }
+
+  .case-section-media,
+  .case-section-media-wide,
+  .case-comparison-grid,
+  .case-media-stack,
+  .concepts-case-page .concepts-gallery-media {
+    width: 100vw;
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .case-section-media,
+  .case-section-media-wide,
+  .case-media-card,
+  .case-comparison-card,
+  .concepts-case-page .concepts-gallery-media {
+    border-radius: 20px;
+  }
+
+  .case-section-media img,
+  .case-section-media-wide img,
+  .case-media-card img,
+  .case-comparison-card img,
+  .concepts-case-page .concepts-gallery-media img {
+    border-radius: 20px;
+  }
+
+  .invest-case-page .case-media-cover,
+  .invest-case-page .case-media-cover img,
+  .menus-case-page .case-media-cover,
+  .menus-case-page .case-media-cover img,
+  .mts-case-page .case-media-cover,
+  .mts-case-page .case-media-cover img,
+  .nadommebel-case-page .case-media-cover,
+  .nadommebel-case-page .case-media-cover img {
+    border-radius: 20px;
+  }
+
+  .case-note {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .case-bullet-group,
+  .case-copy-stack {
+    gap: 8px;
+  }
+
+  .case-bullet-list {
+    padding-left: 20px;
+  }
+
+  .case-hypothesis-card {
+    min-height: 0;
+    padding: 24px;
+    border-radius: 20px;
+    gap: 6px;
+  }
+
+  .case-hypothesis-title {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 18px;
+  }
+
+  .case-hypothesis-copy {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .case-feature-title {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+
+  .case-feature-copy {
+    gap: 8px;
+  }
+
+  .case-footer {
+    min-height: 100px;
+    padding: 0;
+  }
+
+  .case-footer .frame-button,
+  .case-footer .frame-button-light {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .case-footer-actions {
+    bottom: 22px;
+  }
+
+  .case-scroll-top-button-footer {
+    right: 24px;
+    bottom: 108px;
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    padding: 18px;
+    border-radius: 999px;
+    background: rgba(41, 41, 41, 0.76);
+    opacity: 0.86;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .case-scroll-top-button-footer svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .case-scroll-top-button-footer svg path {
+    stroke-width: 2.2px;
+  }
+
+  .menus-case-page #case-admin .case-section-media {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    transform: none;
+    border-radius: 20px;
+  }
+
+  .menus-case-page #case-admin .case-section-media img {
+    border-radius: 20px;
+  }
+
+  .menus-case-page #case-admin .case-feature-stack {
+    margin-top: 48px;
+    gap: 48px;
+  }
+
+  .menus-case-page #case-admin .case-feature-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .menus-case-page #case-admin .case-feature-media {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    transform: none;
+    border-radius: 14px;
+  }
+
+  .menus-case-page #case-admin .case-feature-media img {
+    border-radius: 14px;
+  }
+
   .case-hypothesis-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .case-comparison-grid {
@@ -1520,11 +1768,22 @@ button {
   }
 
   .concepts-case-page .concepts-gallery {
-    width: min(848px, calc(100% - 40px));
+    width: 100%;
+    gap: 64px;
+  }
+
+  .concepts-case-page .concepts-gallery-item {
+    gap: 24px;
   }
 
   .concepts-case-page .concepts-gallery-media {
-    border-radius: 28px;
+    border-radius: 20px;
+  }
+
+  .concepts-case-page .concepts-gallery-caption {
+    width: calc(100% - 48px);
+    font-size: 16px;
+    line-height: 28px;
   }
 
   .topbar {
