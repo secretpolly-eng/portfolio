@@ -10,6 +10,7 @@ const caseToc = document.querySelector(".case-toc");
 const caseTocTrigger = document.querySelector(".case-toc-trigger");
 const caseTocItems = Array.from(document.querySelectorAll("[data-case-section-target]"));
 const caseTocLines = Array.from(document.querySelectorAll(".case-toc-line"));
+const mobileViewportQuery = window.matchMedia("(max-width: 760px)");
 
 function updateHeroScale() {
   if (!heroScaleRoot || !heroFrame) {
@@ -41,9 +42,12 @@ function updateCaseScale() {
 window.addEventListener("resize", updateHeroScale);
 window.addEventListener("resize", updateExperienceScale);
 window.addEventListener("resize", updateCaseScale);
+window.addEventListener("resize", updateFloatingScrollTopButton);
 window.addEventListener("load", updateHeroScale);
 window.addEventListener("load", updateExperienceScale);
 window.addEventListener("load", updateCaseScale);
+window.addEventListener("load", updateFloatingScrollTopButton);
+window.addEventListener("scroll", updateFloatingScrollTopButton, { passive: true });
 
 if ("ResizeObserver" in window && heroScaleRoot) {
   const observer = new ResizeObserver(() => {
@@ -67,6 +71,73 @@ if (scrollTopButton) {
   scrollTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+}
+
+function getScrollTopStopTarget(button) {
+  const caseFooter = button.closest(".case-footer");
+
+  if (caseFooter) {
+    return caseFooter;
+  }
+
+  const experience = button.closest(".experience");
+
+  if (experience) {
+    return experience.querySelector(".experience-footer");
+  }
+
+  return null;
+}
+
+function resetFloatingScrollTopButton(button) {
+  button.classList.remove("is-visible", "is-stopped");
+  button.style.removeProperty("--scroll-top-stop-top");
+}
+
+function updateFloatingScrollTopButton() {
+  if (!scrollTopButton) {
+    return;
+  }
+
+  const stopTarget = getScrollTopStopTarget(scrollTopButton);
+
+  if (!mobileViewportQuery.matches || !stopTarget) {
+    resetFloatingScrollTopButton(scrollTopButton);
+    return;
+  }
+
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  const shouldShow = window.scrollY >= viewportHeight;
+
+  scrollTopButton.classList.toggle("is-visible", shouldShow);
+
+  if (!shouldShow) {
+    scrollTopButton.classList.remove("is-stopped");
+    scrollTopButton.style.removeProperty("--scroll-top-stop-top");
+    return;
+  }
+
+  const stopGap = 8;
+  const fixedBottom = 24;
+  const buttonHeight = scrollTopButton.offsetHeight || 64;
+  const stopTargetRect = stopTarget.getBoundingClientRect();
+  const fixedButtonBottom = viewportHeight - fixedBottom;
+  const shouldStop = stopTargetRect.top - stopGap <= fixedButtonBottom;
+
+  if (!shouldStop) {
+    scrollTopButton.classList.remove("is-stopped");
+    scrollTopButton.style.removeProperty("--scroll-top-stop-top");
+    return;
+  }
+
+  const absoluteContainer = scrollTopButton.offsetParent || scrollTopButton.parentElement;
+  const absoluteContainerTop = absoluteContainer
+    ? absoluteContainer.getBoundingClientRect().top
+    : 0;
+  const stopTop = stopTargetRect.top - absoluteContainerTop - buttonHeight - stopGap;
+
+  scrollTopButton.style.setProperty("--scroll-top-stop-top", `${Math.round(stopTop)}px`);
+  scrollTopButton.classList.add("is-stopped");
 }
 
 function setActiveCaseToc(targetId) {
@@ -151,3 +222,4 @@ updateHeroScale();
 updateExperienceScale();
 updateCaseScale();
 updateCaseTocActive();
+updateFloatingScrollTopButton();

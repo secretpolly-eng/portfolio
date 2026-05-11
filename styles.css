@@ -1703,6 +1703,41 @@ button {
     stroke-width: 2.2px;
   }
 
+  .experience .scroll-top-button,
+  .case-scroll-top-button-footer {
+    position: fixed;
+    top: auto;
+    right: 24px;
+    bottom: 24px;
+    z-index: 50;
+    background: rgba(41, 41, 41, 0.58);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition:
+      opacity 180ms ease,
+      visibility 180ms ease,
+      transform 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .experience .scroll-top-button.is-visible,
+  .case-scroll-top-button-footer.is-visible {
+    opacity: 0.74;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .experience .scroll-top-button.is-stopped,
+  .case-scroll-top-button-footer.is-stopped {
+    position: absolute;
+    top: var(--scroll-top-stop-top);
+    bottom: auto;
+    transform: translateY(0);
+  }
+
   .menus-case-page #case-admin .case-section-media {
     width: 100%;
     max-width: none;
