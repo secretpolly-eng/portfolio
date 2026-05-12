@@ -2003,9 +2003,9 @@ button {
 
   .card-shell {
     width: 100%;
-    aspect-ratio: 393 / 197.09;
+    aspect-ratio: 2010 / 1059;
     border-radius: 18.8px;
-    --card-bleed: 14px;
+    --card-bleed: 0px;
   }
 
   .card-background,
