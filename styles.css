@@ -532,6 +532,10 @@ button {
   z-index: 2;
 }
 
+.card-image-mobile {
+  display: none;
+}
+
 .card-text-state {
   position: absolute;
   inset: 0;
@@ -2461,5 +2465,206 @@ button {
 
   .case-hypotheses-mobile-list {
     display: flex !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .case-page,
+  .case-frame,
+  .case-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .case-content {
+    align-items: stretch;
+  }
+
+  .case-copy-column {
+    box-sizing: border-box;
+    width: calc(100% - 48px) !important;
+    max-width: none !important;
+    align-self: stretch;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+  }
+
+  .case-content > .case-media:first-child,
+  .case-media-cover {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    align-self: stretch;
+    border-radius: 0 0 24px 24px !important;
+    overflow: hidden;
+  }
+
+  .case-content > .case-media:first-child img,
+  .case-media-cover img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    border-radius: 0 0 24px 24px !important;
+  }
+
+  .case-copy-column .case-section-media,
+  .case-copy-column .case-section-media-wide {
+    box-sizing: border-box;
+    width: calc(100% + 48px) !important;
+    max-width: calc(100% + 48px) !important;
+    margin: 8px -24px 0 !important;
+    transform: none !important;
+    align-self: center;
+  }
+
+  .case-copy-column .case-comparison-grid,
+  .case-copy-column .case-media-stack {
+    box-sizing: border-box;
+    width: calc(100% + 48px) !important;
+    max-width: calc(100% + 48px) !important;
+    margin: 16px -24px 0 !important;
+    transform: none !important;
+    align-self: center;
+  }
+
+  .case-copy-column .case-media-card,
+  .case-copy-column .case-comparison-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .case-copy-column .case-section-media img,
+  .case-copy-column .case-section-media-wide img,
+  .case-copy-column .case-media-card img,
+  .case-copy-column .case-comparison-card img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .concepts-case-page .concepts-gallery {
+    box-sizing: border-box;
+    width: calc(100% - 48px) !important;
+    max-width: none !important;
+    align-self: stretch;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+  }
+
+  .concepts-case-page .concepts-gallery-media {
+    box-sizing: border-box;
+    width: calc(100% + 48px) !important;
+    max-width: calc(100% + 48px) !important;
+    margin: 0 -24px !important;
+    transform: none !important;
+    align-self: center;
+  }
+
+  .concepts-case-page .concepts-gallery-media img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .concepts-case-page .concepts-gallery-caption {
+    width: 100% !important;
+  }
+
+  .menus-case-page #case-admin .case-section-media,
+  .menus-case-page #case-admin .case-feature-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+  }
+
+  .case-back-button,
+  .experience .scroll-top-button,
+  .case-scroll-top-button-footer {
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+      rgba(41, 41, 41, 0.34) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.22),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+      0 18px 42px rgba(0, 0, 0, 0.34) !important;
+    backdrop-filter: blur(18px) saturate(155%) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(155%) !important;
+  }
+
+  .experience .scroll-top-button.is-visible,
+  .case-scroll-top-button-footer.is-visible {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .card-shell:first-child {
+    aspect-ratio: 1179 / 592 !important;
+  }
+
+  .card-shell:first-child .card-image-desktop {
+    display: none !important;
+  }
+
+  .card-shell:first-child .card-image-mobile {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    aspect-ratio: 1179 / 592 !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+
+  .case-media picture {
+    display: block;
+    width: 100%;
+  }
+
+  .case-media picture img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .invest-case-page #case-entry .case-section-media-wide {
+    width: calc(100% + 48px) !important;
+    max-width: calc(100% + 48px) !important;
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+  }
+
+  .invest-case-page #case-entry .case-section-media-wide picture,
+  .invest-case-page #case-entry .case-section-media-wide img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .menus-case-page #case-admin .case-section-media,
+  .menus-case-page #case-admin .case-feature-media {
+    box-sizing: border-box;
+    width: calc(100% + 48px) !important;
+    max-width: calc(100% + 48px) !important;
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+    transform: none !important;
+  }
+
+  .menus-case-page #case-admin .case-section-media img,
+  .menus-case-page #case-admin .case-feature-media img {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }

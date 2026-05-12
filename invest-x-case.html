@@ -8,7 +8,7 @@
       name="description"
       content="Кейс Polina Podkopaeva про концепт Invest X для новичков в инвестициях."
     />
-    <link rel="stylesheet" href="./styles.css?v=20260512-mobile-redo2" />
+    <link rel="stylesheet" href="./styles.css?v=20260512-mobile-redo4" />
   </head>
   <body class="case-body invest-case-body">
     <nav class="case-toc" aria-label="Оглавление кейса">
@@ -251,12 +251,18 @@
                   class="case-media case-section-media case-section-media-wide"
                   aria-label="Баннер как точка входа"
                 >
-                  <img
-                    src="./assets/invest-x-case-cover.png"
-                    alt="Баннер Invest X для входа в приложение из образовательного контента"
-                    width="4080"
-                    height="2003"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 760px)"
+                      srcset="./assets/invest-x-case-cover-mobile.png"
+                    />
+                    <img
+                      src="./assets/invest-x-case-cover.png"
+                      alt="Баннер Invest X для входа в приложение из образовательного контента"
+                      width="4080"
+                      height="2003"
+                    />
+                  </picture>
                 </div>
               </section>
             </div>
@@ -346,6 +352,6 @@
       </section>
     </main>
 
-    <script src="./script.js?v=20260512-mobile-redo2"></script>
+    <script src="./script.js?v=20260512-mobile-redo4"></script>
   </body>
 </html>
