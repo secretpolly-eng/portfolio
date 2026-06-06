@@ -1121,6 +1121,71 @@ button {
   margin-left: auto;
 }
 
+.ozon-web-case-page .case-copy-column:not(.case-copy-column-intro) {
+  gap: 64px;
+}
+
+.ozon-web-case-page .case-paragraph-muted {
+  color: #8f8f8f;
+}
+
+.case-cross-link {
+  box-sizing: border-box;
+  width: calc(100vw - 80px);
+  max-width: 1840px;
+  min-height: 118px;
+  margin-left: 50%;
+  padding: 20px 32px 20px 16px;
+  border-radius: 24px;
+  background: #0066ff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  text-decoration: none;
+  transform: translateX(-50%);
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.case-cross-link:hover {
+  background: #0a70ff;
+  transform: translateX(-50%) translateY(-1px);
+}
+
+.case-cross-link-badge {
+  width: 42px;
+  min-width: 42px;
+  height: 100px;
+  border-radius: 999px;
+  background: #050505;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.case-cross-link-text {
+  flex: 1 1 auto;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0;
+}
+
+.case-cross-link-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+}
+
 .case-feature-row {
   width: 100%;
   display: grid;
@@ -2680,6 +2745,43 @@ button {
 }
 
 @media (max-width: 760px) {
+  .ozon-web-case-page .case-copy-column:not(.case-copy-column-intro) {
+    gap: 48px;
+  }
+
+  .case-cross-link {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 96px;
+    margin-left: 0 !important;
+    padding: 14px 16px 14px 12px;
+    border-radius: 20px;
+    gap: 16px;
+    transform: none !important;
+  }
+
+  .case-cross-link:hover {
+    transform: none !important;
+  }
+
+  .case-cross-link-badge {
+    width: 34px;
+    min-width: 34px;
+    height: 72px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .case-cross-link-text {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .case-cross-link-icon {
+    width: 30px;
+    height: 30px;
+  }
+
   .case-hypothesis-title {
     font-size: 16px;
     line-height: 20px;
