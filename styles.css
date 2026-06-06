@@ -1125,28 +1125,39 @@ button {
   gap: 64px;
 }
 
+.ozon-web-case-page .case-content {
+  padding-top: 104px;
+}
+
 .ozon-web-case-page .case-paragraph-muted {
   color: #8f8f8f;
 }
 
 .case-cross-link {
   box-sizing: border-box;
-  width: calc(100vw - 80px);
-  max-width: 1840px;
+  width: min(1760px, calc(100vw - 160px));
+  max-width: none;
   min-height: 118px;
   margin-left: 50%;
   padding: 20px 32px 20px 16px;
   border-radius: 24px;
   background: #0066ff;
-  color: #ffffff;
+  color: #ffffff !important;
   display: flex;
   align-items: center;
   gap: 32px;
-  text-decoration: none;
+  text-decoration: none !important;
   transform: translateX(-50%);
   transition:
     background-color 180ms ease,
     transform 180ms ease;
+}
+
+.case-cross-link:visited,
+.case-cross-link:hover,
+.case-cross-link:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 .case-cross-link:hover {
@@ -1174,10 +1185,12 @@ button {
 
 .case-cross-link-text {
   flex: 1 1 auto;
+  color: #ffffff;
   font-size: 34px;
   font-weight: 700;
   line-height: 42px;
   letter-spacing: 0;
+  text-decoration: none;
 }
 
 .case-cross-link-icon {
