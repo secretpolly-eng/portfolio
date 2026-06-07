@@ -709,6 +709,48 @@ button {
   transform: translateY(0);
 }
 
+.case-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  pointer-events: auto;
+}
+
+.case-home-button {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(41, 41, 41, 0.92);
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.case-home-button:hover {
+  background: #353535;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.case-home-button:active {
+  transform: translateY(0);
+}
+
+.case-home-button svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
 .case-back-button svg {
   display: block;
   flex: 0 0 auto;
@@ -1135,19 +1177,19 @@ button {
 
 .case-cross-link {
   box-sizing: border-box;
-  width: min(1760px, calc(100vw - 160px));
-  max-width: none;
-  min-height: 118px;
-  margin-left: 50%;
-  padding: 20px 32px 20px 16px;
-  border-radius: 24px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 92px;
+  margin-left: 0;
+  padding: 16px 24px 16px 16px;
+  border-radius: 20px;
   background: #0066ff;
   color: #ffffff !important;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   text-decoration: none !important;
-  transform: translateX(-50%);
+  transform: none;
   transition:
     background-color 180ms ease,
     transform 180ms ease;
@@ -1162,7 +1204,7 @@ button {
 
 .case-cross-link:hover {
   background: #0a70ff;
-  transform: translateX(-50%) translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .case-cross-link-badge {
@@ -1186,9 +1228,9 @@ button {
 .case-cross-link-text {
   flex: 1 1 auto;
   color: #ffffff;
-  font-size: 34px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 24px;
   letter-spacing: 0;
   text-decoration: none;
 }
@@ -2786,8 +2828,8 @@ button {
   }
 
   .case-cross-link-text {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .case-cross-link-icon {
