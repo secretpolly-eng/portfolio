@@ -8,7 +8,7 @@
       name="description"
       content="Кейс Polina Podkopaeva про дашборд для мониторинга принтеров Ozon."
     />
-    <link rel="stylesheet" href="./styles.css?v=20260607-ozon-web-fix2" />
+    <link rel="stylesheet" href="./styles.css?v=20260607-ozon-web-fix3" />
   </head>
   <body class="case-body ozon-web-case-body">
     <nav class="case-toc" aria-label="Оглавление кейса">
@@ -30,12 +30,6 @@
         </button>
         <button class="case-toc-item" type="button" data-case-section-target="case-solution">
           Решение
-        </button>
-        <button class="case-toc-item" type="button" data-case-section-target="case-design-system">
-          Дизайн система
-        </button>
-        <button class="case-toc-item" type="button" data-case-section-target="case-development">
-          Разработка
         </button>
         <button class="case-toc-item" type="button" data-case-section-target="case-results">
           Результат
@@ -189,23 +183,28 @@
                   Так пользователь сразу видит нагрузку и&nbsp;изменения без&nbsp;ручной
                   работы с&nbsp;таблицами
                 </p>
-              </section>
-
-              <section class="case-section" id="case-design-system" data-case-section>
-                <h2 class="case-subheading">Дизайн система</h2>
-                <p class="case-paragraph">
-                  Расширила дизайн-систему: добавила карточки метрик, кастомный график
-                  и&nbsp;сгенерировала иллюстрацию под&nbsp;задачу
-                </p>
-              </section>
-
-              <section class="case-section" id="case-development" data-case-section>
-                <h2 class="case-subheading">Разработка</h2>
-                <p class="case-paragraph">
-                  Из-за&nbsp;ограниченного ресурса упростили часть функциональности:
-                  вместо динамичных графичных счетчиков оставили обновляемые числовые
-                  значения и&nbsp;сфокусировались на&nbsp;ключевом графике
-                </p>
+                <div class="case-solution-details">
+                  <div class="case-solution-detail">
+                    <h3 class="case-solution-detail-title">Дизайн система</h3>
+                    <p class="case-paragraph">
+                      ДС&nbsp;не&nbsp;предполагала графиков, карточек счетчиков и&nbsp;подходящей
+                      иллюстрации под&nbsp;контент. Кастомить пришлось почти все и&nbsp;добавлять
+                      компоненты, иллюстрацию генерила также самостоятельно под&nbsp;задачу
+                    </p>
+                  </div>
+                  <div class="case-solution-detail">
+                    <h3 class="case-solution-detail-title">Разработка</h3>
+                    <p class="case-paragraph">
+                      С&nbsp;ограниченным ресурсом в&nbsp;виде разработки я&nbsp;и&nbsp;правда столкнулась.
+                      Искали компромиссы, чтобы не&nbsp;перегружать ребят, но&nbsp;в&nbsp;то&nbsp;же время
+                      оставить живую идею того, что&nbsp;я&nbsp;хотела изменить в&nbsp;подходе
+                      к&nbsp;админкам. Часть функционала мы&nbsp;упростили, в&nbsp;первой итерации
+                      счетчики я&nbsp;тоже предлагала динамичные и&nbsp;графичные, но&nbsp;сошлись
+                      на&nbsp;обновляемых числовых значениях в&nbsp;карточках. А&nbsp;все силы пустили
+                      на&nbsp;главный график, где можно смотреть статистику печати по&nbsp;дням
+                    </p>
+                  </div>
+                </div>
               </section>
             </div>
 
