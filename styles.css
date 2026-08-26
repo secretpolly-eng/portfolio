@@ -940,6 +940,10 @@ button {
   text-wrap: pretty;
 }
 
+.case-paragraph-muted {
+  color: #8f8f8f;
+}
+
 .case-findings {
   width: 100%;
   display: flex;
